@@ -1,0 +1,22 @@
+{
+  "name": "trae-neo-theme",
+  "displayName": "Trae Neo Theme",
+  "description": "Un thème sombre inspiré de Trae, avec une ambiance froide et élégante.",
+  "version": "1.0.0",
+  "publisher": "neo",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Trae Neo",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Trae-Neo-colors-theme.json"
+      }
+    ]
+  }
+}
