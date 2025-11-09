@@ -1,14 +1,14 @@
 {
   "name": "trae-neo-theme",
   "displayName": "Trae Neo Theme",
-  "description": "Un thème sombre inspiré de Trae, avec une ambiance froide et élégante.",
+  "description": "A dark theme inspired by Trae, featuring a cold and elegant atmosphere",
   "version": "1.0.0",
-  "publisher": "neo",
+  "publisher": "neoraw",
   "license": "MIT",
   "author": "Neo",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Neo/trae-neo-theme"
+    "url": "https://github.com/neoraw/trae-neo-theme"
   },
   "credits": "Inspired by the original Trae Theme (by @trae.codes)",
   "engines": {
