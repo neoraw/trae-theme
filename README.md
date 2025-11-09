@@ -2,7 +2,7 @@
 
 > _A dark, elegant and cinematic theme inspired by Trae — rebuilt and refined by **Neo**._
 
-![Trae Neo Theme Preview](https://raw.githubusercontent.com/Antony1332/neo-trae-theme-vscode/main/previews/neo-trae.png)
+![Trae Neo Theme Preview](https://raw.githubusercontent.com/Antony1332/neo-trae-theme-vscode/main/previews/preview.png)
 
 ---
 
