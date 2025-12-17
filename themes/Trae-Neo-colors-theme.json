@@ -304,6 +304,32 @@
       "name": "HTML Attribute Numbers",
       "scope": ["constant.numeric.css", "constant.numeric.html"],
       "settings": { "foreground": "#f48cca" }
+    },
+    {
+      "name": "JSX Text Content",
+      "scope": [
+        "meta.jsx.children",
+        "meta.jsx.children.tsx",
+        "meta.jsx.children.jsx"
+      ],
+      "settings": {
+        "foreground": "#e0e0e0"
+      }
+    },
+    {
+      "name": "JSX Expressions",
+      "scope": ["meta.block.tsx", "meta.var.expr.tsx", "meta.arrow.tsx"],
+      "settings": {
+        "foreground": "#e0e0e0"
+      }
+    },
+    {
+      "name": "JSX Comments",
+      "scope": ["comment.block.jsx", "comment.block.tsx"],
+      "settings": {
+        "foreground": "#737780",
+        "fontStyle": "italic"
+      }
     }
   ]
 }
