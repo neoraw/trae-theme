@@ -192,7 +192,7 @@
     },
 
     {
-      "name": "HTML / JSX Tags",
+      "name": "HTML",
       "scope": [
         "entity.name.tag",
         "meta.tag",
@@ -203,6 +203,13 @@
       ],
       "settings": {
         "foreground": "#f2858c"
+      }
+    },
+    {
+      "name": "JSX Component Tags",
+      "scope": ["support.class.component.jsx", "support.class.component.tsx"],
+      "settings": {
+        "foreground": "#b38cff"
       }
     },
     {
