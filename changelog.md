@@ -4,6 +4,11 @@ All notable changes to this theme are documented here.
 
 ---
 
+## [1.1.6]
+
+- Fixed JSX children text being incorrectly highlighted as JSX tags
+- Improved JSX tag scope precision
+
 ## [1.1.5] · Patch Release — Advanced JS / TS & JSX Highlighting
 
 ### Added

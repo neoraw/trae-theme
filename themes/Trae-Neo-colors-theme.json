@@ -192,17 +192,28 @@
     },
 
     {
-      "name": "HTML",
+      "name": "HTML / JSX Tags",
       "scope": [
-        "entity.name.tag",
-        "meta.tag",
-        "meta.tag.sgml",
-        "support.class.component",
-        "support.class.component.js",
-        "support.class.component.tsx"
+        "entity.name.tag.html",
+        "entity.name.tag.jsx",
+        "entity.name.tag.tsx",
+        "punctuation.definition.tag.html",
+        "punctuation.definition.tag.jsx",
+        "punctuation.definition.tag.tsx"
       ],
       "settings": {
         "foreground": "#f2858c"
+      }
+    },
+    {
+      "name": "JSX Text Content",
+      "scope": [
+        "meta.jsx.children",
+        "meta.jsx.children.tsx",
+        "meta.jsx.children.jsx"
+      ],
+      "settings": {
+        "foreground": "#e0e0e0"
       }
     },
     {
