@@ -4,7 +4,7 @@ All notable changes to this theme are documented here.
 
 ---
 
-## [1.1.4] · Patch Release — Advanced JS / TS & JSX Highlighting
+## [1.1.5]· Patch Release — Advanced JS / TS & JSX Highlighting
 
 ### Added
 
