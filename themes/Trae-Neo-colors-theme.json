@@ -306,6 +306,41 @@
       "settings": { "foreground": "#f48cca" }
     },
     {
+      "name": "Numeric constants (JS/TS)",
+      "scope": [
+        "constant.numeric",
+        "constant.numeric.decimal",
+        "constant.numeric.float",
+        "constant.numeric.hex"
+      ],
+      "settings": {
+        "foreground": "#f48cca"
+      }
+    },
+    {
+      "name": "Boolean constants",
+      "scope": [
+        "constant.language.boolean",
+        "constant.language.true",
+        "constant.language.false"
+      ],
+      "settings": {
+        "foreground": "#80bbff"
+      }
+    },
+    {
+      "name": "Null / NaN",
+      "scope": ["constant.language.null", "constant.language.nan"],
+      "settings": {
+        "foreground": "#80bbff"
+      }
+    },
+    {
+      "name": "Undefined / Infinity",
+      "scope": ["constant.language.undefined", "constant.language.infinity"],
+      "settings": { "foreground": "#6f88a8" }
+    },
+    {
       "name": "JSX Text Content",
       "scope": [
         "meta.jsx.children",
