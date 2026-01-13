@@ -1,7 +1,3 @@
-# 🖤 Trae Neo Theme
-
-> _A dark, elegant and cinematic theme inspired by Trae, rebuilt and refined by **Neo**._
-
 ![Trae Neo Theme Preview](https://raw.githubusercontent.com/neoraw/trae-theme/main/previews/preview.png)
 
 ---
