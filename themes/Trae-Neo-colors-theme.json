@@ -1,18 +1,35 @@
 {
   "name": "Trae Neo",
   "type": "dark",
-
+  "semanticHighlighting": true,
+  "semanticTokenColors": {
+    "type:javascript": "#80eaff",
+    "type:typescript": "#80eaff",
+    "class:javascript": "#80eaff",
+    "class:typescript": "#80eaff",
+    "type.defaultLibrary:javascript": "#80eaff",
+    "type.defaultLibrary:typescript": "#80eaff",
+    "class.defaultLibrary:javascript": "#80eaff",
+    "class.defaultLibrary:typescript": "#80eaff",
+    "variable.defaultLibrary:javascript": "#ded47e",
+    "variable.defaultLibrary:typescript": "#ded47e",
+    "variable": "#ded47e",
+    "variable.readonly": "#80bbff",
+    "property": "#ffffff",
+    "property.css": "#ffffff"
+  },
   "palette": {
     "bgLight": "#222427",
     "bg": "#1a1b1d",
     "accent_focus": "#323336",
     "accent-hover": "#242628",
-    "text": "#fff",
+    "text": "#ffffff",
     "muted": "#ccced6",
     "html": "#f2858c",
     "keyword": "#b38cff",
-    "variable": "#ded47e",
-    "punctuation": "#ded47e",
+    "variable": "#e4e6eb",
+    "property": "#ffffff",
+    "punctuation": "#ccced6",
     "parameter": "#ded47e",
     "string": "#82d99f",
     "function": "#f29d79",
@@ -20,11 +37,10 @@
     "number": "#f48cca",
     "class": "#b38cff",
     "comment": "#737780",
-    "operator": "#fff",
+    "operator": "#ffffff",
     "warning": "#cca700",
     "error": "#ff6464"
   },
-
   "colors": {
     "focusBorder": "#323336",
     "list.activeSelectionBackground": "#323336",
@@ -32,32 +48,25 @@
     "editor.selectionBackground": "#323336",
     "statusBar.background": "#323336",
     "activityBar.activeBorder": "#323336",
-
     "list.hoverBackground": "#242628",
     "list.hoverForeground": "#FFFFFF",
     "editorHoverWidget.background": "#242628",
     "editorHoverWidget.foreground": "#FFFFFF",
     "editorHoverWidget.border": "#323336",
-
     "editorCursor.foreground": "#FFFFFF",
     "terminalCursor.foreground": "#FFFFFF",
-
     "activityBar.background": "#222427",
     "sideBar.background": "#1a1b1d",
-
     "editor.background": "#1a1b1d",
     "panel.background": "#1a1b1d",
     "tab.activeBackground": "#1a1b1d",
     "tab.inactiveBackground": "#222427",
-
     "editorGroup.background": "#1a1b1d",
     "editorGroupHeader.tabsBackground": "#1a1b1d",
-
     "sideBar.border": "#232528",
     "editorGroup.border": "#2a2c2f",
     "editorGroupHeader.tabsBorder": "#232528",
     "editorGroupHeader.border": "#232528",
-
     "foreground": "#ffffff",
     "descriptionForeground": "#ccced6",
     "sideBar.foreground": "#ccced6",
@@ -66,7 +75,6 @@
     "editorLineNumber.foreground": "#5c5e61",
     "editorLineNumber.activeForeground": "#ccced6"
   },
-
   "tokenColors": [
     {
       "name": "Keywords",
@@ -84,36 +92,84 @@
       }
     },
     {
-      "name": "Imports & Exports",
+      "name": "Imports & Exports Keywords",
       "scope": [
         "keyword.control.import",
         "keyword.control.export",
-        "meta.import",
-        "meta.export"
+        "meta.import keyword.control"
       ],
-      "settings": { "foreground": "#f48c83" }
+      "settings": {
+        "foreground": "#b38cff"
+      }
     },
     {
-      "name": "Variables, Parameters and Punctuation",
+      "name": "Imported Names (Rating, etc.)",
       "scope": [
-        "variable",
-        "variable.other.readwrite",
-        "variable.other",
-        "variable.language",
-        "variable.parameter",
-        "meta.parameter",
-        "punctuation",
-        "punctuation.definition",
-        "punctuation.separator",
-        "punctuation.section",
-        "punctuation.terminator"
+        "variable.other.readwrite.alias",
+        "variable.other.readwrite.alias.js",
+        "variable.other.readwrite.alias.ts",
+        "meta.import variable",
+        "meta.import variable.other.readwrite",
+        "variable.import"
       ],
       "settings": {
         "foreground": "#ded47e"
       }
     },
     {
-      "name": "Functions",
+      "name": "Types & Primitive Classes (Object, Number, String...)",
+      "scope": [
+        "support.class.builtin",
+        "support.class.builtin.js",
+        "support.class.builtin.ts",
+        "support.class.js",
+        "support.class.ts",
+        "support.class",
+        "support.type",
+        "support.type.primitive",
+        "entity.name.type",
+        "entity.name.type.class",
+        "entity.name.type.object",
+        "entity.name.type.primitive",
+        "storage.type.cs",
+        "storage.type.annotation",
+        "meta.type",
+        "meta.type.annotation"
+      ],
+      "settings": {
+        "foreground": "#80eaff"
+      }
+    },
+    {
+      "name": "Variables",
+      "scope": ["variable.language"],
+      "settings": {
+        "foreground": "#e4e6eb"
+      }
+    },
+    {
+      "name": "Parameters",
+      "scope": ["variable.parameter", "meta.parameter"],
+      "settings": {
+        "foreground": "#ded47e"
+      }
+    },
+    {
+      "name": "Punctuation & Separators",
+      "scope": [
+        "punctuation",
+        "punctuation.definition",
+        "punctuation.separator",
+        "punctuation.section",
+        "punctuation.terminator",
+        "punctuation.accessor"
+      ],
+      "settings": {
+        "foreground": "#ccced6"
+      }
+    },
+    {
+      "name": "Functions & Methods",
       "scope": [
         "entity.name.function",
         "support.function",
@@ -121,7 +177,8 @@
         "variable.function",
         "meta.function.method",
         "support.method",
-        "meta.method-call"
+        "meta.method-call",
+        "support.function.misc.css"
       ],
       "settings": {
         "foreground": "#f29d79"
@@ -141,101 +198,126 @@
         "foreground": "#82d99f"
       }
     },
-
     {
       "name": "Constants",
       "scope": [
         "variable.other.constant",
         "variable.constant",
-        "meta.definition.variable constant",
-        "meta.const-variable",
-        "meta.var.expr.ts",
-        "meta.variable.ts",
-        "meta.variable.declaration",
-        "meta.variable",
         "support.constant"
       ],
       "settings": {
         "foreground": "#80bbff"
       }
     },
-
     {
-      "name": "Object Properties",
+      "name": "Object Keys (Literal Keys in Script)",
+      "scope": [
+        "meta.object-literal.key",
+        "meta.object.member",
+        "support.type.property-name",
+        "support.type.property-name.json"
+      ],
+      "settings": {
+        "foreground": "#ffffff"
+      }
+    },
+    {
+      "name": "Vue / HTML Template Identifiers & Readwrite Variables",
+      "scope": [
+        "variable.other.readwrite",
+        "variable.other.readwrite.js",
+        "variable.other.readwrite.ts",
+        "text.html.vue-html variable",
+        "text.html.vue-html variable.other.readwrite",
+        "text.html.vue-html meta.embedded.expression variable",
+        "text.html.vue-html meta.attribute.directive variable",
+        "meta.directive.vue variable",
+        "source.vue meta.directive variable",
+        "variable.other.object"
+      ],
+      "settings": {
+        "foreground": "#ded47e"
+      }
+    },
+    {
+      "name": "React State Destructuring Value",
+      "scope": [
+        "meta.var.expr.jsx variable.other.readwrite:first-child",
+        "meta.var.expr.tsx variable.other.readwrite:first-child",
+        "meta.definition.variable.jsx variable.other.readwrite:first-child",
+        "meta.definition.variable.tsx variable.other.readwrite:first-child"
+      ],
+      "settings": {
+        "foreground": "#80bbff"
+      }
+    },
+    {
+      "name": "Object Access - Sub Properties",
       "scope": [
         "variable.other.property",
-        "meta.property",
         "variable.other.member",
-        "meta.object-literal.key"
+        "meta.property.object"
       ],
       "settings": {
-        "foreground": "#e4e6eb"
+        "foreground": "#ffffff"
       }
     },
     {
-      "name": "Types",
+      "name": "HTML / Vue Tags (Native Elements)",
       "scope": [
-        "entity.name.type",
-        "support.type",
-        "support.class",
-        "storage.type.cs",
-        "storage.type.annotation",
-        "meta.type",
-        "meta.return-type",
-        "meta.type.annotation",
-        "meta.interface",
-        "meta.class"
-      ],
-      "settings": {
-        "foreground": "#80eaff"
-      }
-    },
-
-    {
-      "name": "HTML / JSX Tags",
-      "scope": [
+        "entity.name.tag",
         "entity.name.tag.html",
-        "entity.name.tag.jsx",
-        "entity.name.tag.tsx",
-        "punctuation.definition.tag.html",
-        "punctuation.definition.tag.jsx",
-        "punctuation.definition.tag.tsx"
+        "entity.name.tag.vue",
+        "punctuation.definition.tag",
+        "entity.name.tag.css"
       ],
       "settings": {
         "foreground": "#f2858c"
       }
     },
     {
-      "name": "JSX Text Content",
+      "name": "Vue Components & JSX Components",
       "scope": [
-        "meta.jsx.children",
-        "meta.jsx.children.tsx",
-        "meta.jsx.children.jsx"
+        "entity.name.tag.custom",
+        "entity.name.tag.jsx",
+        "entity.name.tag.tsx",
+        "support.class.component",
+        "support.class.component.html",
+        "support.class.component.vue",
+        "support.class.component.jsx",
+        "support.class.component.tsx"
       ],
       "settings": {
-        "foreground": "#e0e0e0"
+        "foreground": "#80eaff"
       }
     },
     {
-      "name": "JSX Component Tags",
-      "scope": ["support.class.component.jsx", "support.class.component.tsx"],
-      "settings": {
-        "foreground": "#b38cff"
-      }
-    },
-    {
-      "name": "HTML / JSX Attributes",
+      "name": "HTML / Vue Attributes & Directives",
       "scope": [
         "entity.other.attribute-name",
         "entity.other.attribute-name.html",
+        "entity.other.attribute-name.vue",
         "entity.other.attribute-name.jsx",
-        "variable.other.readwrite.attribute",
-        "meta.tag.attributes",
-        "meta.attribute",
-        "meta.jsx.attribute"
+        "entity.other.attribute-name.directive.vue",
+        "entity.other.attribute-name.class.css",
+        "entity.other.attribute-name.id.css",
+        "entity.other.attribute-name.pseudo-class.css",
+        "entity.other.attribute-name.pseudo-element.css"
       ],
       "settings": {
         "foreground": "#ded47e"
+      }
+    },
+    {
+      "name": "JSX / Vue Text Content",
+      "scope": [
+        "meta.jsx.children",
+        "meta.jsx.children.tsx",
+        "meta.jsx.children.jsx",
+        "text.html.vue-html"
+      ],
+      "settings": {
+        "foreground": "#e0e0e0"
       }
     },
     {
@@ -243,7 +325,6 @@
       "scope": [
         "entity.name.class",
         "meta.class",
-        "support.class",
         "entity.other.inherited-class",
         "storage.type.class"
       ],
@@ -251,7 +332,6 @@
         "foreground": "#b38cff"
       }
     },
-
     {
       "name": "Comments",
       "scope": [
@@ -279,7 +359,77 @@
         "foreground": "#ffffff"
       }
     },
-
+    {
+      "name": "CSS Properties (Keys)",
+      "scope": ["support.type.property-name.css", "meta.property-name.css"],
+      "settings": {
+        "foreground": "#ffffff"
+      }
+    },
+    {
+      "name": "CSS Property Values (Keywords like solid, underline)",
+      "scope": [
+        "support.constant.property-value.css",
+        "meta.property-value.css support.constant",
+        "support.constant.color.w3c-standard-color.css"
+      ],
+      "settings": {
+        "foreground": "#82d99f"
+      }
+    },
+    {
+      "name": "CSS Numbers & Units (2px, 4px, 1rem, 50%)",
+      "scope": [
+        "constant.numeric.css",
+        "keyword.other.unit.css",
+        "keyword.other.unit.px.css",
+        "keyword.other.unit.rem.css",
+        "keyword.other.unit.em.css",
+        "keyword.other.unit.percentage.css"
+      ],
+      "settings": {
+        "foreground": "#f48cca"
+      }
+    },
+    {
+      "name": "CSS Variables",
+      "scope": [
+        "variable.argument.css",
+        "variable.css",
+        "variable.other.custom-property.css"
+      ],
+      "settings": {
+        "foreground": "#ded47e"
+      }
+    },
+    {
+      "name": "Numeric constants",
+      "scope": [
+        "constant.numeric",
+        "constant.numeric.decimal",
+        "constant.numeric.float",
+        "constant.numeric.hex",
+        "constant.numeric.html"
+      ],
+      "settings": {
+        "foreground": "#f48cca"
+      }
+    },
+    {
+      "name": "Boolean / Null / Undefined constants",
+      "scope": [
+        "constant.language.boolean",
+        "constant.language.true",
+        "constant.language.false",
+        "constant.language.null",
+        "constant.language.nan",
+        "constant.language.undefined",
+        "constant.language.infinity"
+      ],
+      "settings": {
+        "foreground": "#80bbff"
+      }
+    },
     {
       "name": "Warnings",
       "scope": [
@@ -291,7 +441,6 @@
         "foreground": "#cca700"
       }
     },
-
     {
       "name": "Errors",
       "scope": ["invalid", "markup.error", "message.error", "keyword.error"],
@@ -299,89 +448,11 @@
         "foreground": "#ff6464"
       }
     },
-
     {
       "name": "Default Text",
       "scope": ["source", "text"],
-      "settings": { "foreground": "#e0e0e0" }
-    },
-    {
-      "name": "JSON Keys",
-      "scope": ["support.type.property-name.json"],
-      "settings": { "foreground": "#ded47e" }
-    },
-    {
-      "name": "CSS Properties & Values",
-      "scope": [
-        "support.type.property-name.css",
-        "support.constant.property-value.css"
-      ],
-      "settings": { "foreground": "#82d99f" }
-    },
-    {
-      "name": "HTML Attribute Numbers",
-      "scope": ["constant.numeric.css", "constant.numeric.html"],
-      "settings": { "foreground": "#f48cca" }
-    },
-    {
-      "name": "Numeric constants (JS/TS)",
-      "scope": [
-        "constant.numeric",
-        "constant.numeric.decimal",
-        "constant.numeric.float",
-        "constant.numeric.hex"
-      ],
-      "settings": {
-        "foreground": "#f48cca"
-      }
-    },
-    {
-      "name": "Boolean constants",
-      "scope": [
-        "constant.language.boolean",
-        "constant.language.true",
-        "constant.language.false"
-      ],
-      "settings": {
-        "foreground": "#80bbff"
-      }
-    },
-    {
-      "name": "Null / NaN",
-      "scope": ["constant.language.null", "constant.language.nan"],
-      "settings": {
-        "foreground": "#80bbff"
-      }
-    },
-    {
-      "name": "Undefined / Infinity",
-      "scope": ["constant.language.undefined", "constant.language.infinity"],
-      "settings": { "foreground": "#6f88a8" }
-    },
-    {
-      "name": "JSX Text Content",
-      "scope": [
-        "meta.jsx.children",
-        "meta.jsx.children.tsx",
-        "meta.jsx.children.jsx"
-      ],
       "settings": {
         "foreground": "#e0e0e0"
-      }
-    },
-    {
-      "name": "JSX Expressions",
-      "scope": ["meta.block.tsx", "meta.var.expr.tsx", "meta.arrow.tsx"],
-      "settings": {
-        "foreground": "#e0e0e0"
-      }
-    },
-    {
-      "name": "JSX Comments",
-      "scope": ["comment.block.jsx", "comment.block.tsx"],
-      "settings": {
-        "foreground": "#737780",
-        "fontStyle": "italic"
       }
     }
   ]

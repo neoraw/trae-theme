@@ -2,6 +2,13 @@
 
 All notable changes to this theme are documented here.
 
+## [1.1.7] · State, Vue, React & CSS Enhancements
+
+- **React / JSX State Variables:** State destructuring values (e.g. `userData`, `isLoading`) now use the distinct Trae light blue (`#80bbff`) for better visual recognition of reactive state.
+- **Vue & React Custom Components:** Custom component tags and custom elements (e.g. `<NavigationBar />`, Vue components in templates) are now consistently highlighted in light cyan-blue (`#80eaff`), aligning with Trae's native component style and separating them clearly from native HTML tags.
+- **CSS / Styling Fine-Tuning:** Polished scopes for CSS properties, custom properties (CSS variables), units, and property values for better consistency across modern styling frameworks (Tailwind, CSS Modules, pure CSS).
+- **Scope Hierarchy:** Refined scope specificity for `entity.name.tag.custom`, Vue component tags, and destructuring patterns to prevent color bleeding on regular variables.
+
 ---
 
 ## [1.1.6]
