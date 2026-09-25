@@ -141,10 +141,10 @@
       }
     },
     {
-      "name": "Variables",
+      "name": "Variables (including this)",
       "scope": ["variable.language"],
       "settings": {
-        "foreground": "#e4e6eb"
+        "foreground": "#ded47e"
       }
     },
     {
